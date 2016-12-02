@@ -8,3 +8,6 @@
 .env
 tmp
 .vscode
+
+# project specific
+work-at-olist/static/
