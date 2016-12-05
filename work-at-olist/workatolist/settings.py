@@ -1,4 +1,13 @@
+"""
+Settings for workatolist project.
+
+Some of these settings are retrieved from env vars.
+"""
+
 import os
+from prettyconf import config
+from dj_database_url import config as db_config
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,16 +17,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ld7s4bcrf)mso_*y^mnnfrr=fh&)4gs$*e%-acjxw5nyulpioz'
+SECRET_KEY = config('SECRET_KEY', default='ThereIsNoSecret')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=config.boolean)
 
-ALLOWED_HOSTS = [
-    'wao.herokuapp.com',
-    '127.0.0.1',
-    'localhost'
-]
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=['*'], cast=config.list)
 
 
 # Application definition
@@ -67,10 +72,7 @@ WSGI_APPLICATION = 'workatolist.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': db_config(default='postgres://user:password@localhost:5432/database')
 }
 
 
@@ -110,5 +112,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
