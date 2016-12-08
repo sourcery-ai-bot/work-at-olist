@@ -1,0 +1,11 @@
+language: python
+services:
+  - postgresql
+python:
+  - "3.5"
+env:
+  - DATABASE_URL=postgres://postgres:@localhost:5432/wao
+install: "pip install -r requirements-local.txt"
+before_script:
+  - psql -c 'create database wao;' -U postgres
+script: python work-at-olist/manage.py test channels
