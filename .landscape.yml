@@ -1,0 +1,6 @@
+uses:
+  - django
+requirements:
+  - requirements/production.txt
+python-targets:
+  - 3
