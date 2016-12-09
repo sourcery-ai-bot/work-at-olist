@@ -15,20 +15,17 @@ class BaseModel(models.Model):
     reference = models.CharField(_('Reference'), max_length=100, unique=True)
 
     class Meta:
-        """BaseModel Meta options.
-        """
+        """BaseModel Meta options."""
         abstract = True
 
 
 class Channel(BaseModel):
-    """Channel represents places where products can be published.
-    """
+    """Channel represents places where products can be published."""
 
     name = models.CharField(_('Name'), max_length=256, unique=True)
 
     class Meta:
-        """Channel Meta options.
-        """
+        """Channel Meta options."""
 
         ordering = ['reference']
         verbose_name = _('Channel')
@@ -39,8 +36,7 @@ class Channel(BaseModel):
 
 
 class Category(MPTTModel, BaseModel):
-    """Category represents products's hierarquical organization on a Channel.
-    """
+    """Category represents products's hierarquical organization on a Channel."""
 
     name = models.CharField(_('Name'), max_length=256)
     channel = models.ForeignKey(

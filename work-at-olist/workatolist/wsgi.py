@@ -1,5 +1,4 @@
-"""
-WSGI config for workatolist project.
+"""WSGI config for workatolist project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
