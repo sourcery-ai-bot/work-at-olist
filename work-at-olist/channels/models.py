@@ -18,6 +18,19 @@ class BaseModel(models.Model):
         """BaseModel Meta options."""
         abstract = True
 
+    @staticmethod
+    def generate_reference(name, prefixes=None):
+        """Generate a 'reference' based on the provided 'name' and list of
+        'prefixes'.
+        """
+        if not prefixes:
+            prefixes = []
+
+        prefixes.append(name)
+        prefixes = [item.lower().replace(' ', '-') for item in prefixes]
+
+        return '-'.join(prefixes)
+
 
 class Channel(BaseModel):
     """Channel represents places where products can be published."""
