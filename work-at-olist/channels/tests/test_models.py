@@ -1,4 +1,4 @@
-"""Models' test cases of the Channels app."""
+"""Models' test cases."""
 
 from django.test import TestCase
 from channels.models import BaseModel, Channel, Category

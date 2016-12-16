@@ -1,6 +1,6 @@
 """URLs from workatolist project."""
 
-from django.conf.urls import url
-from django.contrib import admin
+from django.conf.urls import url, include
+from channels import urls as channels_url
 
-urlpatterns = [url(r'^admin/', admin.site.urls), ]
+urlpatterns = [url(r'^api/', include(channels_url, namespace='api'))]

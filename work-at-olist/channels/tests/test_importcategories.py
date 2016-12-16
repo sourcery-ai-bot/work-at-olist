@@ -1,4 +1,4 @@
-"""ImportCategories command's test cases of the Channels app."""
+"""ImportCategories command's test cases."""
 
 import csv
 import tempfile
