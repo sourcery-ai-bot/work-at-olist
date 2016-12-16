@@ -1,293 +1,87 @@
 [
   {
     "model": "channels.channel",
-    "pk": "777fb507-ab2e-4c5a-8812-3abbf89e479b",
-    "fields": {
-      "reference": "saraiva",
-      "name": "saraiva"
-    }
-  },
-  {
-    "model": "channels.channel",
-    "pk": "af1566a3-6d5f-4031-b49a-92f901914a48",
+    "pk": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
     "fields": {
       "reference": "walmart",
+      "created_at": "2016-12-16T20:28:46.088Z",
+      "updated_at": "2016-12-16T20:28:46.088Z",
       "name": "walmart"
     }
   },
   {
     "model": "channels.category",
-    "pk": "069ed261-1c1c-4a8a-a832-1e7f3e77ec6e",
+    "pk": "04464677-783c-4d11-80a5-01e0c7be5005",
     "fields": {
-      "reference": "walmart-games-xbox-one-games",
-      "name": "Games",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "4cc15ebf-a558-4a94-b969-a1cabd470a2b",
-      "lft": 17,
-      "rght": 18,
-      "tree_id": 3,
-      "level": 2
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "16421d43-fdbb-46c1-a4fd-eb03e62b778f",
-    "fields": {
-      "reference": "walmart-books-national-literature-fiction-fantastic",
-      "name": "Fiction Fantastic",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "a804d266-ed5b-4857-a7da-a1ff063ea2d1",
-      "lft": 13,
-      "rght": 14,
-      "tree_id": 1,
-      "level": 2
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "3678ed4d-dad0-4f45-803d-ced6ef71afb1",
-    "fields": {
-      "reference": "walmart-games-xbox-one-accessories",
-      "name": "Accessories",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "4cc15ebf-a558-4a94-b969-a1cabd470a2b",
-      "lft": 13,
-      "rght": 14,
-      "tree_id": 3,
-      "level": 2
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "4589102b-53df-4957-9c9c-671d75dd107c",
-    "fields": {
-      "reference": "walmart-books-national-literature-science-fiction",
-      "name": "Science Fiction",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "a804d266-ed5b-4857-a7da-a1ff063ea2d1",
-      "lft": 15,
-      "rght": 16,
-      "tree_id": 1,
-      "level": 2
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "4cc15ebf-a558-4a94-b969-a1cabd470a2b",
-    "fields": {
-      "reference": "walmart-games-xbox-one",
-      "name": "XBOX One",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "c34cede5-36ac-4fad-a1a1-fae3d08ace46",
-      "lft": 12,
-      "rght": 19,
-      "tree_id": 3,
-      "level": 1
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "66bec6f8-ad11-4fbb-a5e4-68b92c9c10c8",
-    "fields": {
-      "reference": "walmart-games-xbox-360-accessories",
-      "name": "Accessories",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "bed291fd-e3e4-4aad-a499-723038016894",
-      "lft": 5,
-      "rght": 6,
-      "tree_id": 3,
-      "level": 2
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "7055afc0-72c8-43be-8c70-5801f820798b",
-    "fields": {
-      "reference": "walmart-computers",
-      "name": "Computers",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
+      "reference": "walmart-books",
+      "created_at": "2016-12-16T20:28:46.113Z",
+      "updated_at": "2016-12-16T20:28:46.113Z",
+      "name": "Books",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
       "parent": null,
       "lft": 1,
-      "rght": 10,
-      "tree_id": 2,
+      "rght": 18,
+      "tree_id": 1,
       "level": 0
     }
   },
   {
     "model": "channels.category",
-    "pk": "71d87913-7908-41fc-bec8-bb4248e728dd",
+    "pk": "058a7bdd-3adb-47b8-8a3b-8ed6ce48136a",
     "fields": {
-      "reference": "walmart-games-playstation-4",
-      "name": "Playstation 4",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "c34cede5-36ac-4fad-a1a1-fae3d08ace46",
-      "lft": 2,
-      "rght": 3,
+      "reference": "walmart-games-xbox-one-accessories",
+      "created_at": "2016-12-16T20:28:46.200Z",
+      "updated_at": "2016-12-16T20:28:46.200Z",
+      "name": "Accessories",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "bd84d02d-dd30-44d4-9540-12143e3f9595",
+      "lft": 13,
+      "rght": 14,
       "tree_id": 3,
-      "level": 1
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "77355f5b-08bb-4ace-8614-0a46ce0198f7",
-    "fields": {
-      "reference": "walmart-computers-desktop",
-      "name": "Desktop",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "7055afc0-72c8-43be-8c70-5801f820798b",
-      "lft": 2,
-      "rght": 3,
-      "tree_id": 2,
-      "level": 1
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "9941e5a2-0984-4483-a457-c24c584e927b",
-    "fields": {
-      "reference": "walmart-books-computers",
-      "name": "Computers",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "df54d5f6-10ca-46ba-a339-c1b124f50f9b",
-      "lft": 2,
-      "rght": 9,
-      "tree_id": 1,
-      "level": 1
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "a1804dff-a730-49e6-bcf8-74a06a601992",
-    "fields": {
-      "reference": "walmart-books-foreign-literature",
-      "name": "Foreign Literature",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "df54d5f6-10ca-46ba-a339-c1b124f50f9b",
-      "lft": 10,
-      "rght": 11,
-      "tree_id": 1,
-      "level": 1
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "a804d266-ed5b-4857-a7da-a1ff063ea2d1",
-    "fields": {
-      "reference": "walmart-books-national-literature",
-      "name": "National Literature",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "df54d5f6-10ca-46ba-a339-c1b124f50f9b",
-      "lft": 12,
-      "rght": 17,
-      "tree_id": 1,
-      "level": 1
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "adf3d283-60f4-40b3-ab5e-ec4770b8d83b",
-    "fields": {
-      "reference": "walmart-books-computers-programming",
-      "name": "Programming",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "9941e5a2-0984-4483-a457-c24c584e927b",
-      "lft": 7,
-      "rght": 8,
-      "tree_id": 1,
       "level": 2
     }
   },
   {
     "model": "channels.category",
-    "pk": "b05f868b-64be-48fd-811d-cb25f1edbce1",
+    "pk": "0f0a18ec-1ba9-4453-ac60-ba43799d6c9f",
     "fields": {
-      "reference": "walmart-computers-tablets",
-      "name": "Tablets",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "7055afc0-72c8-43be-8c70-5801f820798b",
-      "lft": 8,
-      "rght": 9,
-      "tree_id": 2,
-      "level": 1
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "b3792575-a24f-484b-8a7c-a363148b9d3b",
-    "fields": {
-      "reference": "walmart-computers-hardware",
-      "name": "Hardware",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "7055afc0-72c8-43be-8c70-5801f820798b",
-      "lft": 4,
-      "rght": 5,
-      "tree_id": 2,
-      "level": 1
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "b394494e-d8dd-46a8-b81f-cb9e238e8694",
-    "fields": {
-      "reference": "walmart-books-computers-database",
-      "name": "Database",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "9941e5a2-0984-4483-a457-c24c584e927b",
-      "lft": 5,
-      "rght": 6,
-      "tree_id": 1,
-      "level": 2
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "ba3916b0-891d-4b39-a8b6-bafe1bf09fd3",
-    "fields": {
-      "reference": "walmart-books-computers-applications",
-      "name": "Applications",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "9941e5a2-0984-4483-a457-c24c584e927b",
-      "lft": 3,
-      "rght": 4,
-      "tree_id": 1,
-      "level": 2
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "bed291fd-e3e4-4aad-a499-723038016894",
-    "fields": {
-      "reference": "walmart-games-xbox-360",
-      "name": "XBOX 360",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "c34cede5-36ac-4fad-a1a1-fae3d08ace46",
-      "lft": 4,
-      "rght": 11,
+      "reference": "walmart-games-xbox-360-games",
+      "created_at": "2016-12-16T20:28:46.173Z",
+      "updated_at": "2016-12-16T20:28:46.173Z",
+      "name": "Games",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "d468ebf9-823d-484d-8213-ddc2725d07b1",
+      "lft": 9,
+      "rght": 10,
       "tree_id": 3,
-      "level": 1
+      "level": 2
     }
   },
   {
     "model": "channels.category",
-    "pk": "c10a47cc-16f8-4b14-8747-926bda986851",
+    "pk": "14bf7534-9339-49a1-b076-9a0ad652794c",
     "fields": {
-      "reference": "walmart-computers-notebooks",
-      "name": "Notebooks",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "7055afc0-72c8-43be-8c70-5801f820798b",
-      "lft": 6,
-      "rght": 7,
-      "tree_id": 2,
-      "level": 1
+      "reference": "walmart-books-national-literature-fiction-fantastic",
+      "created_at": "2016-12-16T20:28:46.128Z",
+      "updated_at": "2016-12-16T20:28:46.128Z",
+      "name": "Fiction Fantastic",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "cd36b0e9-cebe-4e02-a62d-b6b9c1835d0b",
+      "lft": 13,
+      "rght": 14,
+      "tree_id": 1,
+      "level": 2
     }
   },
   {
     "model": "channels.category",
-    "pk": "c34cede5-36ac-4fad-a1a1-fae3d08ace46",
+    "pk": "38f966b5-b626-447c-b596-659e832550b1",
     "fields": {
       "reference": "walmart-games",
+      "created_at": "2016-12-16T20:28:46.159Z",
+      "updated_at": "2016-12-16T20:28:46.159Z",
       "name": "Games",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
       "parent": null,
       "lft": 1,
       "rght": 20,
@@ -297,40 +91,14 @@
   },
   {
     "model": "channels.category",
-    "pk": "df54d5f6-10ca-46ba-a339-c1b124f50f9b",
-    "fields": {
-      "reference": "walmart-books",
-      "name": "Books",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": null,
-      "lft": 1,
-      "rght": 18,
-      "tree_id": 1,
-      "level": 0
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "df82fea8-3507-486a-a8b0-36db94941fb9",
-    "fields": {
-      "reference": "walmart-games-xbox-360-games",
-      "name": "Games",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "bed291fd-e3e4-4aad-a499-723038016894",
-      "lft": 9,
-      "rght": 10,
-      "tree_id": 3,
-      "level": 2
-    }
-  },
-  {
-    "model": "channels.category",
-    "pk": "e61d2d8c-cc26-4daf-b436-2529d9b71b29",
+    "pk": "65f3f7e6-e8a4-498f-8137-311647011e16",
     "fields": {
       "reference": "walmart-games-xbox-one-console",
+      "created_at": "2016-12-16T20:28:46.188Z",
+      "updated_at": "2016-12-16T20:28:46.188Z",
       "name": "Console",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "4cc15ebf-a558-4a94-b969-a1cabd470a2b",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "bd84d02d-dd30-44d4-9540-12143e3f9595",
       "lft": 15,
       "rght": 16,
       "tree_id": 3,
@@ -339,14 +107,288 @@
   },
   {
     "model": "channels.category",
-    "pk": "f8ea4668-8a71-4d08-8a3f-c300a2fdce7c",
+    "pk": "7753be39-bd65-4b94-be18-4b07f7e07cda",
     "fields": {
-      "reference": "walmart-games-xbox-360-console",
-      "name": "Console",
-      "channel": "af1566a3-6d5f-4031-b49a-92f901914a48",
-      "parent": "bed291fd-e3e4-4aad-a499-723038016894",
+      "reference": "walmart-games-xbox-one-games",
+      "created_at": "2016-12-16T20:28:46.194Z",
+      "updated_at": "2016-12-16T20:28:46.194Z",
+      "name": "Games",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "bd84d02d-dd30-44d4-9540-12143e3f9595",
+      "lft": 17,
+      "rght": 18,
+      "tree_id": 3,
+      "level": 2
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "78602f84-4c79-4ce9-9263-0218d8e32d6b",
+    "fields": {
+      "reference": "walmart-computers-tablets",
+      "created_at": "2016-12-16T20:28:46.217Z",
+      "updated_at": "2016-12-16T20:28:46.217Z",
+      "name": "Tablets",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "c88b0540-397f-430e-978d-8f5a45d8f933",
+      "lft": 8,
+      "rght": 9,
+      "tree_id": 2,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "81b0abb2-9da7-4c23-a37e-bdac3e304f33",
+    "fields": {
+      "reference": "walmart-computers-desktop",
+      "created_at": "2016-12-16T20:28:46.222Z",
+      "updated_at": "2016-12-16T20:28:46.222Z",
+      "name": "Desktop",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "c88b0540-397f-430e-978d-8f5a45d8f933",
+      "lft": 2,
+      "rght": 3,
+      "tree_id": 2,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "857d3907-9b53-48b5-85b7-010a7e4dc980",
+    "fields": {
+      "reference": "walmart-books-computers-applications",
+      "created_at": "2016-12-16T20:28:46.143Z",
+      "updated_at": "2016-12-16T20:28:46.143Z",
+      "name": "Applications",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "b9ca8969-a744-41b0-87d3-e84d4aaca0ce",
+      "lft": 3,
+      "rght": 4,
+      "tree_id": 1,
+      "level": 2
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "8fcff38a-9e2b-49fc-adac-8ef42031b95c",
+    "fields": {
+      "reference": "walmart-books-computers-programming",
+      "created_at": "2016-12-16T20:28:46.156Z",
+      "updated_at": "2016-12-16T20:28:46.156Z",
+      "name": "Programming",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "b9ca8969-a744-41b0-87d3-e84d4aaca0ce",
       "lft": 7,
       "rght": 8,
+      "tree_id": 1,
+      "level": 2
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "96dc77bd-ebf0-4e7a-af18-d10cda98e3ce",
+    "fields": {
+      "reference": "walmart-books-foreign-literature",
+      "created_at": "2016-12-16T20:28:46.133Z",
+      "updated_at": "2016-12-16T20:28:46.133Z",
+      "name": "Foreign Literature",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "04464677-783c-4d11-80a5-01e0c7be5005",
+      "lft": 10,
+      "rght": 11,
+      "tree_id": 1,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "a6378d63-8b32-4172-ae94-c1cd89aed14e",
+    "fields": {
+      "reference": "walmart-computers-hardware",
+      "created_at": "2016-12-16T20:28:46.227Z",
+      "updated_at": "2016-12-16T20:28:46.227Z",
+      "name": "Hardware",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "c88b0540-397f-430e-978d-8f5a45d8f933",
+      "lft": 4,
+      "rght": 5,
+      "tree_id": 2,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "b9ca8969-a744-41b0-87d3-e84d4aaca0ce",
+    "fields": {
+      "reference": "walmart-books-computers",
+      "created_at": "2016-12-16T20:28:46.138Z",
+      "updated_at": "2016-12-16T20:28:46.138Z",
+      "name": "Computers",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "04464677-783c-4d11-80a5-01e0c7be5005",
+      "lft": 2,
+      "rght": 9,
+      "tree_id": 1,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "bd84d02d-dd30-44d4-9540-12143e3f9595",
+    "fields": {
+      "reference": "walmart-games-xbox-one",
+      "created_at": "2016-12-16T20:28:46.184Z",
+      "updated_at": "2016-12-16T20:28:46.184Z",
+      "name": "XBOX One",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "38f966b5-b626-447c-b596-659e832550b1",
+      "lft": 12,
+      "rght": 19,
+      "tree_id": 3,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "c88b0540-397f-430e-978d-8f5a45d8f933",
+    "fields": {
+      "reference": "walmart-computers",
+      "created_at": "2016-12-16T20:28:46.208Z",
+      "updated_at": "2016-12-16T20:28:46.208Z",
+      "name": "Computers",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": null,
+      "lft": 1,
+      "rght": 10,
+      "tree_id": 2,
+      "level": 0
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "cd36b0e9-cebe-4e02-a62d-b6b9c1835d0b",
+    "fields": {
+      "reference": "walmart-books-national-literature",
+      "created_at": "2016-12-16T20:28:46.117Z",
+      "updated_at": "2016-12-16T20:28:46.117Z",
+      "name": "National Literature",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "04464677-783c-4d11-80a5-01e0c7be5005",
+      "lft": 12,
+      "rght": 17,
+      "tree_id": 1,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "d1fd81d3-3a95-4b82-9ce6-c82334400e5a",
+    "fields": {
+      "reference": "walmart-books-computers-database",
+      "created_at": "2016-12-16T20:28:46.149Z",
+      "updated_at": "2016-12-16T20:28:46.149Z",
+      "name": "Database",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "b9ca8969-a744-41b0-87d3-e84d4aaca0ce",
+      "lft": 5,
+      "rght": 6,
+      "tree_id": 1,
+      "level": 2
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "d468ebf9-823d-484d-8213-ddc2725d07b1",
+    "fields": {
+      "reference": "walmart-games-xbox-360",
+      "created_at": "2016-12-16T20:28:46.163Z",
+      "updated_at": "2016-12-16T20:28:46.163Z",
+      "name": "XBOX 360",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "38f966b5-b626-447c-b596-659e832550b1",
+      "lft": 4,
+      "rght": 11,
+      "tree_id": 3,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "db00184a-bd0c-434a-929e-57f2acd2163e",
+    "fields": {
+      "reference": "walmart-games-xbox-360-console",
+      "created_at": "2016-12-16T20:28:46.167Z",
+      "updated_at": "2016-12-16T20:28:46.167Z",
+      "name": "Console",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "d468ebf9-823d-484d-8213-ddc2725d07b1",
+      "lft": 7,
+      "rght": 8,
+      "tree_id": 3,
+      "level": 2
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "dfccadd7-1cb0-4e71-974a-c73727506d36",
+    "fields": {
+      "reference": "walmart-games-playstation-4",
+      "created_at": "2016-12-16T20:28:46.205Z",
+      "updated_at": "2016-12-16T20:28:46.205Z",
+      "name": "Playstation 4",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "38f966b5-b626-447c-b596-659e832550b1",
+      "lft": 2,
+      "rght": 3,
+      "tree_id": 3,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "e5173a8a-8df3-4db1-b45e-1ceb3af819bb",
+    "fields": {
+      "reference": "walmart-computers-notebooks",
+      "created_at": "2016-12-16T20:28:46.212Z",
+      "updated_at": "2016-12-16T20:28:46.212Z",
+      "name": "Notebooks",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "c88b0540-397f-430e-978d-8f5a45d8f933",
+      "lft": 6,
+      "rght": 7,
+      "tree_id": 2,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "fa815391-b438-43f8-8b55-10546e93b495",
+    "fields": {
+      "reference": "walmart-books-national-literature-science-fiction",
+      "created_at": "2016-12-16T20:28:46.122Z",
+      "updated_at": "2016-12-16T20:28:46.122Z",
+      "name": "Science Fiction",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "cd36b0e9-cebe-4e02-a62d-b6b9c1835d0b",
+      "lft": 15,
+      "rght": 16,
+      "tree_id": 1,
+      "level": 2
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "ff69c5a6-afdb-4980-bd72-7cb16196abf6",
+    "fields": {
+      "reference": "walmart-games-xbox-360-accessories",
+      "created_at": "2016-12-16T20:28:46.179Z",
+      "updated_at": "2016-12-16T20:28:46.179Z",
+      "name": "Accessories",
+      "channel": "fc9962d4-a65d-489f-855b-f4b8cd9f3bf4",
+      "parent": "d468ebf9-823d-484d-8213-ddc2725d07b1",
+      "lft": 5,
+      "rght": 6,
       "tree_id": 3,
       "level": 2
     }

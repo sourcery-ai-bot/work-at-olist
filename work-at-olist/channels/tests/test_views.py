@@ -17,7 +17,7 @@ class ChannelViewSetTest(TestCase):
         response = client.get('/api/channels/', format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 2)
+        self.assertEqual(len(response.data), 1)
 
     def test_retrieve(self):
         """Tests '/api/channels/{reference}' endpoint."""

@@ -3,6 +3,7 @@
 import uuid
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.utils.text import slugify
 from mptt.models import MPTTModel, TreeForeignKey
 
 
@@ -12,7 +13,9 @@ class BaseModel(models.Model):
     """
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    reference = models.CharField(_('Reference'), max_length=100, unique=True)
+    reference = models.SlugField(_('Reference'), max_length=100, unique=True)
+    created_at = models.DateTimeField(_('Created At'), auto_now_add=True)
+    updated_at = models.DateTimeField(_('Updated At'), auto_now=True)
 
     class Meta:
         """BaseModel Meta options."""
@@ -27,7 +30,7 @@ class BaseModel(models.Model):
             prefixes = []
 
         prefixes.append(name)
-        prefixes = [item.lower().replace(' ', '-') for item in prefixes]
+        prefixes = [slugify(item) for item in prefixes]
 
         return '-'.join(prefixes)
 
