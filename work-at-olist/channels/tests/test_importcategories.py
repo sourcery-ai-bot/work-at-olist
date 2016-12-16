@@ -1,5 +1,6 @@
 """ImportCategories command's test cases."""
 
+import os
 import csv
 import tempfile
 from django.test import TestCase
@@ -37,7 +38,10 @@ class ImportCategoriesTest(TestCase):
 
         args = ['empty', filename]
         opts = {}
-        call_command('importcategories', *args, **opts)
+        try:
+            call_command('importcategories', *args, **opts)
+        finally:
+            os.unlink(filename)
 
         channel = Channel.objects.get(reference='empty')
         self.assertIsNotNone(channel)
@@ -53,7 +57,10 @@ class ImportCategoriesTest(TestCase):
 
         args = ['onecategory', filename]
         opts = {}
-        call_command('importcategories', *args, **opts)
+        try:
+            call_command('importcategories', *args, **opts)
+        finally:
+            os.unlink(filename)
 
         channel = Channel.objects.get(reference='onecategory')
         self.assertIsNotNone(channel)
@@ -84,7 +91,10 @@ class ImportCategoriesTest(TestCase):
 
         args = ['onecategory', filename]
         opts = {}
-        call_command('importcategories', *args, **opts)
+        try:
+            call_command('importcategories', *args, **opts)
+        finally:
+            os.unlink(filename)
 
         channel = Channel.objects.get(reference='onecategory')
         self.assertIsNotNone(channel)
