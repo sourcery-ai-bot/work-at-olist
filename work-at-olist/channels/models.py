@@ -18,7 +18,6 @@ class BaseModel(models.Model):
     updated_at = models.DateTimeField(_('Updated At'), auto_now=True)
 
     class Meta:
-        """BaseModel Meta options."""
         abstract = True
 
     @staticmethod
@@ -41,8 +40,6 @@ class Channel(BaseModel):
     name = models.CharField(_('Name'), max_length=256, unique=True)
 
     class Meta:
-        """Channel Meta options."""
-
         ordering = ['reference']
         verbose_name = _('Channel')
         verbose_name_plural = _('Channels')
@@ -61,13 +58,11 @@ class Category(MPTTModel, BaseModel):
         'self', null=True, blank=True, related_name='children', db_index=True)
 
     class Meta:
-        """Category Meta options."""
         ordering = ['channel', 'reference']
         verbose_name = _('Category')
         verbose_name_plural = _('Categories')
 
     class MPTTMeta:
-        """Category MPTTMeta options."""
         order_insertion_by = ['reference']
 
     def __str__(self):
