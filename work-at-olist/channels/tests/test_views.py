@@ -11,19 +11,19 @@ class ChannelViewSetTest(TestCase):
     fixtures = ['viewtests']
 
     def test_list(self):
-        """Tests '/api/channels/' endpoint."""
+        """Tests '/api/v1/channels/' endpoint."""
         client = APIClient()
 
-        response = client.get('/api/channels/', format='json')
+        response = client.get('/api/v1/channels/', format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 1)
+        self.assertEqual(len(response.data['results']), 1)
 
     def test_retrieve(self):
-        """Tests '/api/channels/{reference}' endpoint."""
+        """Tests '/api/v1/channels/{reference}' endpoint."""
         client = APIClient()
 
-        response = client.get('/api/channels/walmart/', format='json')
+        response = client.get('/api/v1/channels/walmart/', format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['name'], 'walmart')
@@ -35,20 +35,20 @@ class CategoryViewSetTest(TestCase):
     fixtures = ['viewtests']
 
     def test_list(self):
-        """Tests '/api/categories/' endpoint."""
+        """Tests '/api/v1/categories/' endpoint."""
         client = APIClient()
 
-        response = client.get('/api/categories/', format='json')
+        response = client.get('/api/v1/categories/', format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 24)
+        self.assertEqual(len(response.data['results']), 24)
 
     def test_retrieve(self):
-        """Tests '/api/categories/{reference}' endpoint."""
+        """Tests '/api/v1/categories/{reference}' endpoint."""
         client = APIClient()
 
-        response = client.get('/api/categories/walmart-games-xbox-one-games/',
-                              format='json')
+        response = client.get(
+            '/api/v1/categories/walmart-games-xbox-one-games/', format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['name'], 'Games')
