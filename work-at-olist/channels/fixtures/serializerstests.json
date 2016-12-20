@@ -1,0 +1,76 @@
+[
+  {
+    "model": "channels.channel",
+    "pk": "74d662ce-6de9-4f28-917b-20210bf9ad64",
+    "fields": {
+      "reference": "test",
+      "created_at": "2016-12-20T18:21:08.925Z",
+      "updated_at": "2016-12-20T18:21:08.925Z",
+      "name": "Test"
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "0731b652-5787-4737-9fce-857c81e33b7f",
+    "fields": {
+      "reference": "test-root-one-two-two",
+      "created_at": "2016-12-20T18:21:09.008Z",
+      "updated_at": "2016-12-20T18:21:09.008Z",
+      "name": "Two Two",
+      "channel": "74d662ce-6de9-4f28-917b-20210bf9ad64",
+      "parent": "8425b28f-f574-4fa4-9a3e-d5c9c002b323",
+      "lft": 5,
+      "rght": 6,
+      "tree_id": 1,
+      "level": 2
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "264559be-e42e-4e10-a5ba-086d249c00d2",
+    "fields": {
+      "reference": "test-root-one-two",
+      "created_at": "2016-12-20T18:21:09.002Z",
+      "updated_at": "2016-12-20T18:21:09.002Z",
+      "name": "Two",
+      "channel": "74d662ce-6de9-4f28-917b-20210bf9ad64",
+      "parent": "8425b28f-f574-4fa4-9a3e-d5c9c002b323",
+      "lft": 3,
+      "rght": 4,
+      "tree_id": 1,
+      "level": 2
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "8425b28f-f574-4fa4-9a3e-d5c9c002b323",
+    "fields": {
+      "reference": "test-root-one",
+      "created_at": "2016-12-20T18:21:08.998Z",
+      "updated_at": "2016-12-20T18:21:08.998Z",
+      "name": "One",
+      "channel": "74d662ce-6de9-4f28-917b-20210bf9ad64",
+      "parent": "f3ebe0c5-7a98-4f4a-9c2d-d1049a82db27",
+      "lft": 2,
+      "rght": 7,
+      "tree_id": 1,
+      "level": 1
+    }
+  },
+  {
+    "model": "channels.category",
+    "pk": "f3ebe0c5-7a98-4f4a-9c2d-d1049a82db27",
+    "fields": {
+      "reference": "test-root",
+      "created_at": "2016-12-20T18:21:08.981Z",
+      "updated_at": "2016-12-20T18:21:08.981Z",
+      "name": "Root",
+      "channel": "74d662ce-6de9-4f28-917b-20210bf9ad64",
+      "parent": null,
+      "lft": 1,
+      "rght": 8,
+      "tree_id": 1,
+      "level": 0
+    }
+  }
+]
