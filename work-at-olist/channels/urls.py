@@ -14,5 +14,6 @@ channel_router = nested_routers.NestedSimpleRouter(
 channel_router.register(r'categories', CategoryViewSet)
 
 urlpatterns = [
-    url(r'', include(router.urls)), url(r'', include(channel_router.urls))
+    url(r'', include(router.urls)),
+    url(r'', include(channel_router.urls))
 ]
