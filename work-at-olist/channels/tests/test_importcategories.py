@@ -121,8 +121,7 @@ class ImportCategoriesTest(TestCase):
         finally:
             os.unlink(filename)
 
-        if not error:
-            self.fail('No exception was triggered.')
+        self.assertIsNotNone(error)
 
     def test_reimport(self):
         """Tests importcategories command against reimportation.
