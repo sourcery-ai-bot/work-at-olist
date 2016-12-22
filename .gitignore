@@ -12,3 +12,4 @@ venv
 
 # project specific
 work-at-olist/static/
+work-at-olist/staticfiles/
