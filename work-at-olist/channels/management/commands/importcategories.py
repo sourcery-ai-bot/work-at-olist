@@ -22,7 +22,8 @@ class Command(BaseCommand):
 
     def validate_ancestors(self, channel_ref, categories):
         """Checks if all category ancestors are already registered and returns
-        the last one, the parent.
+        the last one, the parent. Because of the reference format, checking
+        only the parent will validate every ancestor.
         """
         if not len(categories):
             return None, None
@@ -33,15 +34,6 @@ class Command(BaseCommand):
             parent = Category.objects.get(reference=parent_ref)
         except Category.DoesNotExist:
             return None, 'Parent does not exist'
-
-        ancestors = parent.get_ancestors()
-        if len(ancestors) != len(categories[0:-1]):
-            return None, 'Mismatching number of ancestors'
-        for index, value in enumerate(categories[0:-1]):
-            if value != ancestors[index].name:
-                return None, (
-                    'Mismatching ancestor at level {:d} ({:s} should be {:s})'
-                ).format(index, ancestors[index].name, value)
 
         return parent, None
 

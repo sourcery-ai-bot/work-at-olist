@@ -4,7 +4,7 @@ import os
 import csv
 import tempfile
 from django.test import TestCase
-from django.core.management import call_command
+from django.core.management import call_command, CommandError
 from channels.models import Channel
 
 
@@ -97,6 +97,61 @@ class ImportCategoriesTest(TestCase):
             os.unlink(filename)
 
         channel = Channel.objects.get(reference='onecategory')
+        self.assertIsNotNone(channel)
+
+        categories = channel.categories.all()
+        self.assertEqual(categories.count(), len(content))
+
+    def test_missing_parent(self):
+        """Tests importcategories command against a file with a missing parent
+        category.
+        """
+        content = [
+            'Games',
+            'Games / XBOX 360 / Console',
+        ]
+        filename = create_tempcsv(content)
+
+        args = ['onecategory', filename]
+        opts = {}
+        try:
+            call_command('importcategories', *args, **opts)
+        except CommandError as err:
+            error = err.__str__()
+        finally:
+            os.unlink(filename)
+
+        if not error:
+            self.fail('No exception was triggered.')
+
+    def test_reimport(self):
+        """Tests importcategories command against reimportation.
+        """
+        content = [
+            'Books', 'Books / National Literature',
+            'Books / National Literature / Science Fiction',
+            'Books / National Literature / Fiction Fantastic',
+            'Books / Foreign Literature', 'Books / Computers',
+            'Books / Computers / Applications', 'Books / Computers / Database',
+            'Books / Computers / Programming', 'Games', 'Games / XBOX 360',
+            'Games / XBOX 360 / Console', 'Games / XBOX 360 / Games',
+            'Games / XBOX 360 / Accessories', 'Games / XBOX One',
+            'Games / XBOX One / Console', 'Games / XBOX One / Games',
+            'Games / XBOX One / Accessories', 'Games / Playstation 4',
+            'Computers', 'Computers / Notebooks', 'Computers / Tablets',
+            'Computers / Desktop'
+        ]
+        filename = create_tempcsv(content)
+
+        args = ['reimport', filename]
+        opts = {}
+        try:
+            call_command('importcategories', *args, **opts)
+            call_command('importcategories', *args, **opts)
+        finally:
+            os.unlink(filename)
+
+        channel = Channel.objects.get(reference='reimport')
         self.assertIsNotNone(channel)
 
         categories = channel.categories.all()
