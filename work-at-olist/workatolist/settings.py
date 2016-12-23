@@ -74,7 +74,8 @@ REST_FRAMEWORK = {
 
 SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': False,
-    'SECURITY_DEFINITIONS': None
+    'SECURITY_DEFINITIONS': None,
+    'VALIDATOR_URL': None
 }
 
 WSGI_APPLICATION = 'workatolist.wsgi.application'
