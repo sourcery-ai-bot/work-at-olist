@@ -10,5 +10,5 @@ schema_view = get_swagger_view(title='WAO API')
 urlpatterns = [
     url(r'^api/v1/', include(channels_url, namespace='api')),
     url(r'^api-docs/', schema_view),
-    url(r'^', RedirectView.as_view(url='/api-docs'))
+    url(r'^', RedirectView.as_view(url='/api-docs/'))
 ]
