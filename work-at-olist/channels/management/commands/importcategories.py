@@ -29,7 +29,8 @@ class Command(BaseCommand):
             return None, None
 
         parent_ref = Category.generate_reference(
-            categories[-1], [channel_ref] + categories[0:-1])
+            categories[-1], [channel_ref] + categories[:-1]
+        )
         try:
             parent = Category.objects.get(reference=parent_ref)
         except Category.DoesNotExist:
@@ -50,7 +51,7 @@ class Command(BaseCommand):
         reader = csv.DictReader(options['csv'])
         for row in reader:
             full_path = [x.strip() for x in row['Category'].split('/')]
-            ancestors = full_path[0:-1]
+            ancestors = full_path[:-1]
             current = full_path[-1]
 
             parent, error = self.validate_ancestors(channel_ref, ancestors)
